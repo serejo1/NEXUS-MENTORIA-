@@ -72,13 +72,9 @@ function Nav({ accent, ctaLabel }) {
   return (
     <header className="nav">
       <div className="wrap nav-inner">
-        <div className="logo" style={{display:"flex",alignItems:"center",gap:14}}>
-          <img src="assets/nexus-ia-wordmark.png" alt="NEXUS IA" style={{height:18,width:"auto",display:"block"}}/>
-          <span style={{width:1,height:18,background:"var(--line-2)",display:"inline-block"}}/>
-          <span style={{display:"inline-flex",alignItems:"center",gap:6,fontSize:11,letterSpacing:".08em",textTransform:"uppercase",color:"var(--muted)",fontFamily:"var(--mono)"}}>
-            por <img src="assets/next-logo.png" alt="Next Digital" style={{height:22,width:"auto",display:"block"}}/>
-          </span>
-        </div>
+        <a href="#" className="logo" aria-label="NEXUS IA — início" style={{cursor:"pointer"}}>
+          <img src="assets/nexus-ia.png" alt="NEXUS IA" className="brand-nexus" />
+        </a>
         <nav className="nav-links">
           <a href="#beneficios">Formato</a>
           <a href="#modulos">Módulos</a>
@@ -482,40 +478,30 @@ function Comunidade({ accent }) {
     <section className="sec" data-screen-label="07 Comunidade" style={{position:"relative",overflow:"hidden"}}>
       <div aria-hidden style={{position:"absolute",inset:0,pointerEvents:"none",background:`radial-gradient(60% 60% at 50% 0%, ${accent}10, transparent 70%)`}}/>
       <div className="wrap">
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:64,alignItems:"center"}} className="com-layout">
-          <div className="reveal" style={{position:"relative"}}>
-            <div style={{borderRadius:24,overflow:"hidden",border:"1px solid var(--line-2)",background:"#0d0d0e",boxShadow:"0 30px 80px rgba(0,0,0,.45)"}}>
-              <img src="assets/db-comunidade.png" alt="Designers Brasil — maior comunidade de designers do Brasil" style={{display:"block",width:"100%",height:"auto"}}/>
-            </div>
-          </div>
-          <div className="reveal">
-            <div style={{display:"flex",alignItems:"center",gap:14,marginBottom:20}}>
-              <img src="assets/designers-brasil-logo.png" alt="Designers Brasil" style={{height:42,width:"auto",display:"block"}}/>
-            </div>
-            <div className="h-eyebrow" style={{color:accent,marginBottom:14}}>@designersbrazil</div>
-            <h2 className="display" style={{fontSize:"clamp(36px, 4.6vw, 64px)",margin:"0 0 20px",letterSpacing:"-.03em"}}>
-              Criei a maior comunidade de Designers do Brasil.
-            </h2>
-            <p style={{fontSize:17,color:"var(--muted)",margin:"0 0 32px",maxWidth:520}}>
-              Conecte-se, aprenda e evolua com milhares de designers como você. Acesso ao ecossistema do Designers Brasil incluso na mentoria.
-            </p>
+        <div className="reveal" style={{textAlign:"center",maxWidth:880,margin:"0 auto"}}>
+          <div className="h-eyebrow" style={{color:accent,marginBottom:16}}>@designersbrazil</div>
+          <h2 className="display" style={{fontSize:"clamp(40px, 6vw, 88px)",margin:"0 0 24px",letterSpacing:"-.03em"}}>
+            Maior comunidade de criativos do Brasil.
+          </h2>
+          <p style={{fontSize:18,color:"var(--muted)",margin:"0 0 48px"}}>
+            Trabalhar menos, ganhar mais — usando IA como ferramenta principal. Essa é a realidade que você vai dominar.
+          </p>
 
-            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:16,marginBottom:32}} className="com-grid">
-              {[["+10k","Designers"],["60%","Conteúdo IA"],["24/7","Networking"]].map(([n,l],i)=>(
-                <div key={i} style={{padding:"16px 12px",borderTop:`2px solid ${accent}`}}>
-                  <div className="display" style={{fontSize:28,letterSpacing:"-.02em"}}>{n}</div>
-                  <div style={{fontSize:12,color:"var(--muted)",marginTop:4}}>{l}</div>
-                </div>
-              ))}
-            </div>
-
-            <a className="btn btn-ghost" href="https://www.instagram.com/designersbrazil" target="_blank" rel="noopener">
-              <Ic d={ICONS.ig} size={16}/> Seguir @designersbrazil
-            </a>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24,maxWidth:680,margin:"0 auto 48px"}} className="com-grid">
+            {[["80k+","Seguidores"],["60%","Conteúdo gerado por IA"],["24/7","Produção automatizada"]].map(([n,l],i)=>(
+              <div key={i} style={{padding:"20px 12px",borderTop:`2px solid ${accent}`}}>
+                <div className="display" style={{fontSize:36,letterSpacing:"-.02em"}}>{n}</div>
+                <div style={{fontSize:13,color:"var(--muted)",marginTop:6}}>{l}</div>
+              </div>
+            ))}
           </div>
+
+          <a className="btn btn-ghost" href="https://www.instagram.com/designersbrazil" target="_blank" rel="noopener">
+            <Ic d={ICONS.ig} size={16}/> Seguir @designersbrazil
+          </a>
         </div>
       </div>
-      <style>{`@media(max-width:880px){.com-layout{grid-template-columns:1fr !important}} @media(max-width:520px){.com-grid{grid-template-columns:1fr !important}}`}</style>
+      <style>{`@media(max-width:660px){.com-grid{grid-template-columns:1fr !important}}`}</style>
     </section>
   );
 }
@@ -734,19 +720,19 @@ function Footer({ accent }) {
         {/* partners strip */}
         <div className="reveal" style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:24,flexWrap:"wrap",padding:"24px 28px",borderRadius:18,border:"1px solid var(--line-2)",background:"var(--card)",marginBottom:48}}>
           <div className="mono" style={{color:"var(--muted)"}}>Realização & Parceiros</div>
-          <div style={{display:"flex",alignItems:"center",gap:32,flexWrap:"wrap"}}>
-            <img src="assets/next-logo.png" alt="Next Digital" style={{height:44,width:"auto",display:"block"}}/>
+          <div style={{display:"flex",alignItems:"center",gap:28,flexWrap:"wrap"}}>
+            <a href="https://nextdigital.dev.br" target="_blank" rel="noopener" style={{display:"inline-flex",alignItems:"center"}} aria-label="Next Digital">
+              <img src="assets/next.png" alt="Next Digital" style={{height:40,width:"auto"}} />
+            </a>
             <div style={{width:1,height:24,background:"var(--line-2)"}}/>
-            <img src="assets/nexus-ia-wordmark.png" alt="NEXUS IA" style={{height:20,width:"auto",display:"block"}}/>
+            <img src="assets/nexus-ia.png" alt="NEXUS IA" style={{height:22,width:"auto"}} />
           </div>
         </div>
 
         <div style={{display:"grid",gridTemplateColumns:"1.4fr 1fr 1fr 1fr",gap:32}} className="ftr-grid">
           <div>
-            <div className="logo" style={{marginBottom:14,display:"flex",alignItems:"center",gap:12}}>
-              <img src="assets/nexus-ia-wordmark.png" alt="NEXUS IA" style={{height:20,width:"auto",display:"block"}}/>
-              <span style={{width:1,height:18,background:"var(--line-2)"}}/>
-              <img src="assets/next-logo.png" alt="Next Digital" style={{height:26,width:"auto",display:"block"}}/>
+            <div style={{marginBottom:14}}>
+              <img src="assets/nexus-ia.png" alt="NEXUS IA" style={{height:26,width:"auto"}} />
             </div>
             <div style={{color:"var(--muted)",maxWidth:300,marginBottom:16}}>5 meses de imersão em IA aplicada a negócios. Do tráfego pago ao desenvolvimento de agentes.</div>
             <div style={{fontSize:13,color:"var(--muted)"}}>Prof. Serejo Oliveira · Especialista em IA, Marketing e Tecnologia</div>
