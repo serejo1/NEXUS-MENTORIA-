@@ -142,7 +142,7 @@ function Hero({ t, countdown }) {
 
           <div style={{position:"relative"}}>
             <div style={{aspectRatio:"4/5",borderRadius:24,overflow:"hidden",border:"1px solid var(--line-2)",background:"linear-gradient(180deg,#1a1a1c 0%,#0d0d0e 100%)",position:"relative"}}>
-              <image-slot id="hero-mentor" placeholder="Foto Serejo (ensaio IA)" shape="rounded" radius="24" style={{width:"100%",height:"100%"}}></image-slot>
+              <img src="assets/5-hero-mentor.webp" alt="Serejo Oliveira" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
               <div style={{position:"absolute",top:16,left:16,padding:"8px 12px",borderRadius:999,background:"rgba(10,10,11,.6)",backdropFilter:"blur(10px)",border:"1px solid var(--line-2)",fontSize:12}}>
                 <span className="pulse" style={{display:"inline-block",width:6,height:6,borderRadius:"50%",background:t.accent,marginRight:8,verticalAlign:"middle"}}/>
                 TURMA 2026 · PRESENCIAL
@@ -265,7 +265,7 @@ function Mentor({ accent }) {
         <div style={{display:"grid",gridTemplateColumns:"1fr 1.1fr",gap:64,alignItems:"center"}} className="mentor-grid">
           <div className="reveal" style={{position:"relative"}}>
             <div style={{aspectRatio:"3/4",borderRadius:24,overflow:"hidden",border:"1px solid var(--line-2)",background:"#1a1a1c"}}>
-              <image-slot id="mentor-portrait" placeholder="Retrato Serejo (ensaio IA)" shape="rounded" radius="24" style={{width:"100%",height:"100%"}}></image-slot>
+              <img src="assets/6-mentor-portrait.webp" alt="Serejo Oliveira, retrato" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
             </div>
             <div style={{position:"absolute",bottom:-20,right:-20,padding:20,borderRadius:16,background:accent,color:"#0A0A0B",maxWidth:240}}>
               <div className="display" style={{fontSize:36,letterSpacing:"-.02em"}}>15+</div>
