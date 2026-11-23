@@ -73,7 +73,7 @@ function Nav({ accent, ctaLabel }) {
     <header className="nav">
       <div className="wrap nav-inner">
         <a href="#" className="logo" aria-label="NEXUS IA — início" style={{cursor:"pointer"}}>
-          <img src="assets/nexus-ia.png" alt="NEXUS IA" className="brand-nexus" />
+          <img src="nexus-ia.png" alt="NEXUS IA" className="brand-nexus" />
         </a>
         <nav className="nav-links">
           <a href="#beneficios">Formato</a>
@@ -142,7 +142,7 @@ function Hero({ t, countdown }) {
 
           <div style={{position:"relative"}}>
             <div style={{aspectRatio:"4/5",borderRadius:24,overflow:"hidden",border:"1px solid var(--line-2)",background:"linear-gradient(180deg,#1a1a1c 0%,#0d0d0e 100%)",position:"relative"}}>
-              <image-slot id="hero-mentor" placeholder="Foto Serejo (ensaio IA)" shape="rounded" radius="24" style={{width:"100%",height:"100%"}}></image-slot>
+              <img src="assets/5-hero-mentor.webp" alt="Serejo Oliveira" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
               <div style={{position:"absolute",top:16,left:16,padding:"8px 12px",borderRadius:999,background:"rgba(10,10,11,.6)",backdropFilter:"blur(10px)",border:"1px solid var(--line-2)",fontSize:12}}>
                 <span className="pulse" style={{display:"inline-block",width:6,height:6,borderRadius:"50%",background:t.accent,marginRight:8,verticalAlign:"middle"}}/>
                 TURMA 2026 · PRESENCIAL
@@ -265,7 +265,7 @@ function Mentor({ accent }) {
         <div style={{display:"grid",gridTemplateColumns:"1fr 1.1fr",gap:64,alignItems:"center"}} className="mentor-grid">
           <div className="reveal" style={{position:"relative"}}>
             <div style={{aspectRatio:"3/4",borderRadius:24,overflow:"hidden",border:"1px solid var(--line-2)",background:"#1a1a1c"}}>
-              <image-slot id="mentor-portrait" placeholder="Retrato Serejo (ensaio IA)" shape="rounded" radius="24" style={{width:"100%",height:"100%"}}></image-slot>
+              <img src="assets/6-mentor-portrait.webp" alt="Serejo Oliveira, retrato" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
             </div>
             <div style={{position:"absolute",bottom:-20,right:-20,padding:20,borderRadius:16,background:accent,color:"#0A0A0B",maxWidth:240}}>
               <div className="display" style={{fontSize:36,letterSpacing:"-.02em"}}>15+</div>
@@ -722,17 +722,17 @@ function Footer({ accent }) {
           <div className="mono" style={{color:"var(--muted)"}}>Realização & Parceiros</div>
           <div style={{display:"flex",alignItems:"center",gap:28,flexWrap:"wrap"}}>
             <a href="https://nextdigital.dev.br" target="_blank" rel="noopener" style={{display:"inline-flex",alignItems:"center"}} aria-label="Next Digital">
-              <img src="assets/next.png" alt="Next Digital" style={{height:40,width:"auto"}} />
+              <img src="next.png" alt="Next Digital" style={{height:40,width:"auto"}} />
             </a>
             <div style={{width:1,height:24,background:"var(--line-2)"}}/>
-            <img src="assets/nexus-ia.png" alt="NEXUS IA" style={{height:22,width:"auto"}} />
+            <img src="nexus-ia.png" alt="NEXUS IA" style={{height:22,width:"auto"}} />
           </div>
         </div>
 
         <div style={{display:"grid",gridTemplateColumns:"1.4fr 1fr 1fr 1fr",gap:32}} className="ftr-grid">
           <div>
             <div style={{marginBottom:14}}>
-              <img src="assets/nexus-ia.png" alt="NEXUS IA" style={{height:26,width:"auto"}} />
+              <img src="nexus-ia.png" alt="NEXUS IA" style={{height:26,width:"auto"}} />
             </div>
             <div style={{color:"var(--muted)",maxWidth:300,marginBottom:16}}>5 meses de imersão em IA aplicada a negócios. Do tráfego pago ao desenvolvimento de agentes.</div>
             <div style={{fontSize:13,color:"var(--muted)"}}>Prof. Serejo Oliveira · Especialista em IA, Marketing e Tecnologia</div>
