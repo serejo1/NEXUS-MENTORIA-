@@ -73,7 +73,7 @@ function Nav({ accent, ctaLabel }) {
     <header className="nav">
       <div className="wrap nav-inner">
         <a href="#" className="logo" aria-label="NEXUS IA — início" style={{cursor:"pointer"}}>
-          <img src="assets/nexus-ia.png" alt="NEXUS IA" className="brand-nexus" />
+          <img src="nexus-ia.png" alt="NEXUS IA" className="brand-nexus" />
         </a>
         <nav className="nav-links">
           <a href="#beneficios">Formato</a>
@@ -722,17 +722,17 @@ function Footer({ accent }) {
           <div className="mono" style={{color:"var(--muted)"}}>Realização & Parceiros</div>
           <div style={{display:"flex",alignItems:"center",gap:28,flexWrap:"wrap"}}>
             <a href="https://nextdigital.dev.br" target="_blank" rel="noopener" style={{display:"inline-flex",alignItems:"center"}} aria-label="Next Digital">
-              <img src="assets/next.png" alt="Next Digital" style={{height:40,width:"auto"}} />
+              <img src="next.png" alt="Next Digital" style={{height:40,width:"auto"}} />
             </a>
             <div style={{width:1,height:24,background:"var(--line-2)"}}/>
-            <img src="assets/nexus-ia.png" alt="NEXUS IA" style={{height:22,width:"auto"}} />
+            <img src="nexus-ia.png" alt="NEXUS IA" style={{height:22,width:"auto"}} />
           </div>
         </div>
 
         <div style={{display:"grid",gridTemplateColumns:"1.4fr 1fr 1fr 1fr",gap:32}} className="ftr-grid">
           <div>
             <div style={{marginBottom:14}}>
-              <img src="assets/nexus-ia.png" alt="NEXUS IA" style={{height:26,width:"auto"}} />
+              <img src="nexus-ia.png" alt="NEXUS IA" style={{height:26,width:"auto"}} />
             </div>
             <div style={{color:"var(--muted)",maxWidth:300,marginBottom:16}}>5 meses de imersão em IA aplicada a negócios. Do tráfego pago ao desenvolvimento de agentes.</div>
             <div style={{fontSize:13,color:"var(--muted)"}}>Prof. Serejo Oliveira · Especialista em IA, Marketing e Tecnologia</div>
